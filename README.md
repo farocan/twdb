@@ -1,2 +1,2 @@
-# twdb
-The Web Developer Bootcamp 2023
+# The Web Developer Bootcamp 2023
+Portfolio of projects and exercises
