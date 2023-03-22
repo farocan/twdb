@@ -23,15 +23,34 @@
 // 10-65 - ADULT $20
 // 65+ - SENIOR $10
 
-const age = 80;
+// const age = 80;
 
-if (age<5) {
-    console.log ("You are a baby. You get in for free!")
-} else if (age<10) {
-    console.log ("You are a child. You pay $10!")
-} else if (age<65) {
-    console.log ("You are an adult. You pay $20.")
-} else {
-    console.log ("You are a senior. You pay $10.")
+// if (age<5) {
+//     console.log ("You are a baby. You get in for free!")
+// } else if (age<10) {
+//     console.log ("You are a child. You pay $10!")
+// } else if (age<65) {
+//     console.log ("You are an adult. You pay $20.")
+// } else {
+//     console.log ("You are a senior. You pay $10.")
+// }
+
+//Nesting Conditionals
+
+const password = prompt("Please enter a new password");
+//Password must be 6+ characters
+//Password cannot include space
+
+if (password.length >= 6) {
+    if (password.indexOf(" ") === -1) {
+        console.log ("Valid password!")
+    } else {
+        console.log ("Password cannot contain spaces!")
+    }
+} 
+else {
+    console.log ("PASSWORD TOO SHORT! Must be 6+ characters")
 }
+
+
 
