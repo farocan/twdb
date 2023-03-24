@@ -18,7 +18,7 @@ let days = ["Monday", "Tuesday", "Wednesday"]
 > beatles[3] = "ringo" // 'ringo'
 > beatles // [ 'paul', 'john', 'george', 'ringo' ]
 
-// Practise
+// Practice
 > const leaderboard = ['Harry', 'Lua', 'Hermione', 'Bellatrix']; // undefined
 > leaderboard [1] = "Luna" // 'Luna'
 > leaderboard [3] = "Draco" // 'Draco'
