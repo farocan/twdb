@@ -130,3 +130,27 @@ let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]; /
 > colors // [ 'red', 'red-orange', 'DELETED!!', 'forestgreen', 'yellow', 'green', 'blue', 'violet']
 > let scores = [1, 70, 100, 2500, 9, -12, 0, 34] // undefined
 > scores.sort() // [   -12,  0,  1, 100,  2500, 34, 70,   9]
+
+"hi" === "hi" // true
+["hi", "bye"] === ["hi", "bye"] //false
+> [1] === [1] // false
+> [1] == [1] // false
+> [] == [] // false
+> let nums = [1, 2, 3] // undefined
+> let numsCopy = nums // undefined
+> nums // [ 1, 2, 3 ]
+> numsCopy // [ 1, 2, 3 ]
+> nums.push(4) // 4
+> nums // [ 1, 2, 3, 4 ]
+> numsCopy // [ 1, 2, 3, 4 ]
+> numsCopy.pop() // 4
+> nums // [ 1, 2, 3 ]
+> numsCopy // [ 1, 2, 3 ]
+> nums === numsCopy // true
+const gameBoard = [["X", "0", "X"], ["0", "null", "X"], ["0", "0", "X"]] // undefined
+> gameBoard [1] // [ '0', 'null', 'X' ]
+> gameBoard [1][1] // 'null'
+// Nested Arrays Exercise
+> const airplaneSeats = [ ...     ['Ruth', 'Anthony', 'Stevie'],...     ['Amelia', 'Pedro', 'Maya'], ['Xavier', 'Ananya', 'Luis'], ['Luke', null, 'Deniz'],['Rin', 'Sakura', 'Francisco']]; // undefined
+> airplaneSeats [3][1] = "Hugo" // 'Hugo'
+[ [ 'Ruth', 'Anthony', 'Stevie' ], [ 'Amelia', 'Pedro', 'Maya' ], [ 'Xavier', 'Ananya', 'Luis' ], [ 'Luke', 'Hugo', 'Deniz' ], [ 'Rin', 'Sakura', 'Francisco' ]]
