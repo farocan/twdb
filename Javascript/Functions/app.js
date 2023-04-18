@@ -90,9 +90,41 @@
 // }
 
 // Last Element Exercise
-function lastElement([num1, num2, num3]){
-    if (lastElement.length=== 0){
-        return null;
-    }
-    return lastElement[lastElement.length-1];
-}
+// function lastElement (array){
+//     if (array.length === 0){
+//         return null;
+//     } else {
+//        return array[array.length-1];
+//     }
+// }
+
+//Capitalize Exercise
+// function capitalize (str){
+//     return str.substring(0, 1).toUpperCase() + str.slice(1);
+// }
+
+//Sum Array Exercise
+// function sumArray (arr){
+//     let sum=0;
+//     for (let i=0; i<arr.length; i++){
+//         sum += arr[i];
+//     }
+//     return sum;
+// }
+
+//Days Of The Week Exercise
+// const daysWeek = {
+//     1: 'Monday',
+//     2: 'Tuesday',
+//     3:'Wednesday',
+//     4: 'Thursday',
+//     5: 'Friday',
+//     6: 'Saturday',
+//     7: 'Sunday'};
+// function returnDay (num){
+//    if (num<1 || num>7){
+//        return null;
+//    } 
+//    return daysWeek[num]
+// }
+
