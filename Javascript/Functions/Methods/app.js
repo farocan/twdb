@@ -33,7 +33,18 @@
 //     }
 // }
 
-//Methods Exercise****
+//Methods Exercise
+// let square = {
+//     area(side){
+//         return side*side;
+//     },
+//     perimeter(side){
+//         return side*4;
+//     }
+// }
+
+// square.area(10) //100
+// square.perimeter(10) //40
 
 //"This" in methods
 // const cat = {
@@ -62,20 +73,20 @@
 // cat.meow()
 // 58 grey
 
-const cat = {
-    name: "Blue Steele",
-    color: "grey",
-    breed: "scottish fold",
-    meow (){
-        console.log("THIS IS:", this)
-        console.log(`${this.name} says MEOWWWW`)
-    }
-}
+// const cat = {
+//     name: "Blue Steele",
+//     color: "grey",
+//     breed: "scottish fold",
+//     meow (){
+//         console.log("THIS IS:", this)
+//         console.log(`${this.name} says MEOWWWW`)
+//     }
+// }
 
-// cat.meow()
-// Blue Steele says MEOWWWW
+// // cat.meow()
+// // Blue Steele says MEOWWWW
 
-const meow2 = cat.meow;
+// const meow2 = cat.meow;
 
 // cat.meow()
 // THIS IS: {name: 'Blue Steele', color: 'grey', breed: 'scottish fold', meow: ƒ}
@@ -91,3 +102,12 @@ const meow2 = cat.meow;
 // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 
 //Egg Laying Exercise****
+// let hen = {
+//     name: "Helen",
+//     eggCount: 0,
+//     layAnEgg(num){
+//         this.eggCount = this.eggCount+1;
+//         return "EGG";
+//     }
+    
+// }
