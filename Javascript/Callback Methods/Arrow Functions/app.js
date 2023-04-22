@@ -15,8 +15,8 @@
 //     return Math.floor(Math.random() *6) +1
 // }
 
-//Arrow Function Exercise***
-// const greet = name => {
+//Arrow Function Exercise
+// const greet = (name) =>{
 //     return `Hey ${name}!`
 // }
 
