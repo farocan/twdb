@@ -135,19 +135,164 @@
 // image.style.borderRadius = "50%"
 
 //Rainbow Text Exercise ********
-const r = document.querySelector(span)[0]
-const a = document.querySelector(span)[1]
-const i = document.querySelector(span)[2]
-const n = document.querySelector(span)[3]
-const b = document.querySelector(span)[4]
-const o = document.querySelector(span)[5]
-const w = document.querySelector(span)[6]
+// const r = document.querySelector(span)[0]
+// const a = document.querySelector(span)[1]
+// const i = document.querySelector(span)[2]
+// const n = document.querySelector(span)[3]
+// const b = document.querySelector(span)[4]
+// const o = document.querySelector(span)[5]
+// const w = document.querySelector(span)[6]
 
-r.style.color = "colors[0]"
-a.style.color = "colors[1]"
-i.style.color = "colors[2]"
-n.style.color = "colors[3]"
-b.style.color = "colors[4]"
-o.style.color = "colors[5]"
-w.style.color = "colors[6]"
+// r.style.color = "colors[0]"
+// a.style.color = "colors[1]"
+// i.style.color = "colors[2]"
+// n.style.color = "colors[3]"
+// b.style.color = "colors[4]"
+// o.style.color = "colors[5]"
+// w.style.color = "colors[6]"
+//********************
+
+//Class List
+
+// const h2 = document.querySelector("h2")
+// undefined
+// h2.getAttribute("h2")
+// null
+// h2.setAttribute("class", "purple")
+// undefined
+// h2.setAttribute("class", "border")
+// undefined
+// let currentClasses = h2.getAttribute("class")
+// undefined
+// currentClasses
+// 'border'
+// h2.setAttribute("class", `${currentClasses} purple`)
+// undefined
+
+//ClassList Practice*************
+
+//Traversing Parent/Child/Sibling
+
+// const firstBold = document.querySelector("b")
+// undefined
+// firstBold
+// <b>​Silkie​</b>​
+// firstBold.parentElement
+// <p>​…​</p>​
+// firstBold.parentElement.parentElement
+// <body>​…​</body>​
+// firstBold.parentElement.parentElement.parentElement
+// <html lang=​"en">​<head>​…​</head>​<body>​…​</body>​</html>​
+// const paragraph = firstBold.parentElement
+// undefined
+// paragraph.childElementCount
+// 8
+// paragraph.children
+// HTMLCollection(8) [b, b, a, a, a, a, a, a]
+// paragraph.children[0]
+// <b>​Silkie​</b>​
+// paragraph.children[0].parentElement
+// <p>​…​</p>​
+
+// const squareImg = document.querySelector(".square")
+// undefined
+// squareImg
+// <img class=​"square" src=​"https:​/​/​upload.wikimedia.org/​wikipedia/​commons/​thumb/​e/​e2/​Silky_bantam.jpg/​440px-Silky_bantam.jpg" alt>​
+// squareImg.parentElement
+// <body>​…​</body>​
+// squareImg.children
+// HTMLCollection []
+// squareImg.nextSibling
+// #textassignedSlot: nullbaseURI: "file:///C:/Users/Anna/OneDrive/Desktop/Projects/twdb/The%20World%20of%20the%20DOM/Manipulating/index.html"childNodes: NodeList []data: "\n    "firstChild: nullisConnected: truelastChild: nulllength: 5nextElementSibling: img.squarenextSibling: img.squarenodeName: "#text"nodeType: 3nodeValue: "\n    "ownerDocument: documentparentElement: bodyparentNode: bodypreviousElementSibling: img.squarepreviousSibling: img.squaretextContent: "\n    "wholeText: "\n    "[[Prototype]]: Text
+// squareImg.previousSibling
+// #text
+// squareImg.nextElementSibling
+// <img class=​"square" src=​"https:​/​/​upload.wikimedia.org/​wikipedia/​en/​thumb/​e/​e0/​Male_Silkie.png/​460px-Male_Silkie.png" alt>​
+// squareImg.previousElementSibling
+// <p>​…​</p>​
+
+//Append & AppendChild- Creating new elements
+
+// document.createElement("img")
+// <img>​
+// const newImg = document.createElement("img")
+// undefined
+// console.dir(newImg)
+// VM2561:1 imgaccessKey: ""align: ""alt: ""ariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "file:///C:/Users/Anna/OneDrive/Desktop/Projects/twdb/The%20World%20of%20the%20DOM/Manipulating/index.html"border: ""childElementCount: 0childNodes: NodeList []children: HTMLCollection []classList: DOMTokenList [value: '']className: ""clientHeight: 0clientLeft: 0clientTop: 0clientWidth: 0complete: truecontentEditable: "inherit"crossOrigin: nullcurrentSrc: ""dataset: DOMStringMap {}decoding: "auto"dir: ""draggable: trueelementTiming: ""enterKeyHint: ""fetchPriority: "auto"firstChild: nullfirstElementChild: nullheight: 0hidden: falsehspace: 0id: ""inert: falseinnerHTML: ""innerText: ""inputMode: ""isConnected: falseisContentEditable: falseisMap: falselang: ""lastChild: nulllastElementChild: nullloading: "auto"localName: "img"longDesc: ""lowsrc: ""name: ""namespaceURI: "http://www.w3.org/1999/xhtml"naturalHeight: 0naturalWidth: 0nextElementSibling: nullnextSibling: nullnodeName: "IMG"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 0offsetLeft: 0offsetParent: nulloffsetTop: 0offsetWidth: 0onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<img>"outerText: ""ownerDocument: documentparentElement: nullparentNode: nullpart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: nullpreviousSibling: nullreferrerPolicy: ""role: nullscrollHeight: 0scrollLeft: 0scrollTop: 0scrollWidth: 0shadowRoot: nullsizes: ""slot: ""spellcheck: truesrc: ""srcset: ""style: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "IMG"textContent: ""title: ""translate: trueuseMap: ""virtualKeyboardPolicy: ""vspace: 0width: 0x: 0y: 0[[Prototype]]: HTMLImageElement
+// undefined
+// newImg.src = "https://img.freepik.com/free-psd/adorable-beagle-puppy-solo-portrait_53876-73998.jpg?w=2000"
+// 'https://img.freepik.com/free-psd/adorable-beagle-puppy-solo-portrait_53876-73998.jpg?w=2000'
+// document.body.appendChild(newImg)
+// <img src=​"https:​/​/​img.freepik.com/​free-psd/​adorable-beagle-puppy-solo-portrait_53876-73998.jpg?w=2000">​
+// newImg.classList.add("square")
+// undefined
+
+// const newH3 = document.createElement("h3")
+// undefined
+// newH3
+// <h3>​</h3>​
+// newH3.innerText = "I am new!"
+// 'I am new!'
+// document.body.appendChild(newH3)
+// <h3>​I am new!​</h3>​
+
+// const p = document.querySelector("p")
+// undefined
+// p.append("I am new text yaaaaaaaayy!")
+// undefined
+// p.append("I am new text yaaaaaaaayy!", "shdhfkflfllflf")
+// undefined
+// const newB = document.createElement("b")
+// undefined
+// newB.append("Hi!")
+// undefined
+// newB
+// <b>​Hi!​</b>​
+// p.prepend(newB)
+// undefined
+
+// const h2 = document.createElement("h2")
+// undefined
+// h2.append("Are adorable chickens")
+// undefined
+// h2
+// <h2>​Are adorable chickens​</h2>​
+// const h1 = document.querySelector("h1")
+// undefined
+// h1.insertAdjacentElement("afterend", h2)
+// <h2>​Are adorable chickens​</h2>​
+// h1.nextElementSibling
+// <h2>​Are adorable chickens​</h2>​
+
+// const h3 = document.createElement("h3")
+// undefined
+// h3.innerText = "I am h3"
+// 'I am h3'
+// h1.after(h3)
+// undefined
+
+//100 Button Insanity Exercise******************
+
+//removeChild & remove
+// const firstLi = document.querySelector("li")
+// undefined
+// firstLi
+// <li class=​"toclevel-1 tocsection-1">​…​</li>​
+// const ul = firstLi.parentElement
+// undefined
+// ul
+// <ul>​…​</ul>​
+// ul.removeChild(firstLi)
+// <li class=​"toclevel-1 tocsection-1">​…​</li>​
+// const b = document.querySelector("b")
+// undefined
+// b
+// <b>​Silkie​</b>​
+// b.parentElement.removeChild(b)
+// <b>​Silkie​</b>​
+
+// const img = document.querySelector("img")
+// undefined
+// img.remove()
+// undefined
 
