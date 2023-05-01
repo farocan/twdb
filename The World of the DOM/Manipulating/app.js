@@ -169,7 +169,24 @@
 // h2.setAttribute("class", `${currentClasses} purple`)
 // undefined
 
-//ClassList Practice*************
+//ClassList Practice
+// const firstLi = document.querySelector('li:nth-of-type(1)');
+// firstLi.classList.add('highlight');
+
+// const secondLi = document.querySelector('li:nth-of-type(2)');
+// secondLi.classList.remove("highlight");
+
+// const thirdLi = document.querySelector('li:nth-of-type(3)');
+// thirdLi.classList.add("highlight");
+
+// const fourthLi = document.querySelector('li:nth-of-type(4)');
+// fourthLi.classList.add("highlight");
+
+// const fifthLi = document.querySelector('li:nth-of-type(5)');
+// fifthLi.classList.remove("highlight");
+
+// const sixthLi = document.querySelector('li:nth-of-type(6)');
+// sixthLi.classList.add("highlight");
 
 //Traversing Parent/Child/Sibling
 
@@ -272,6 +289,12 @@
 // undefined
 
 //100 Button Insanity Exercise******************
+for (let button=1; button>=100; button++){
+    const button = document.createElement("button");
+    button.innerText = "Click me!";
+    document.div.appendChild(button);
+}
+
 
 //removeChild & remove
 // const firstLi = document.querySelector("li")
