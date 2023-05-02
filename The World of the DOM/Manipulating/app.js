@@ -134,23 +134,21 @@
 // image.style.width = "150px"
 // image.style.borderRadius = "50%"
 
-//Rainbow Text Exercise ********
-// const r = document.querySelector(span)[0]
-// const a = document.querySelector(span)[1]
-// const i = document.querySelector(span)[2]
-// const n = document.querySelector(span)[3]
-// const b = document.querySelector(span)[4]
-// const o = document.querySelector(span)[5]
-// const w = document.querySelector(span)[6]
+//Rainbow Text Exercise 
+// const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; //PLEASE DON'T CHANGE THIS LINE!
 
-// r.style.color = "colors[0]"
-// a.style.color = "colors[1]"
-// i.style.color = "colors[2]"
-// n.style.color = "colors[3]"
-// b.style.color = "colors[4]"
-// o.style.color = "colors[5]"
-// w.style.color = "colors[6]"
-//********************
+//YOU CODE GOES HERE:
+
+// const spans = document.querySelectorAll('h1 span');
+
+// spans[0].style.color = colors[0];
+// spans[1].style.color = colors[1];
+// spans[2].style.color = colors[2];
+// spans[3].style.color = colors[3];
+// spans[4].style.color = colors[4];
+// spans[5].style.color = colors[5];
+// spans[6].style.color = colors[6];
+
 
 //Class List
 
@@ -187,6 +185,17 @@
 
 // const sixthLi = document.querySelector('li:nth-of-type(6)');
 // sixthLi.classList.add("highlight");
+
+//Solution
+// const lis = document.querySelectorAll('li');
+// for (let i = 0; i < lis.length; i++) {
+//   if (lis[i].classList.contains('highlight')) {
+//     lis[i].classList.remove('highlight');
+//   } else {
+//     lis[i].classList.add('highlight');
+//   }
+// }
+
 
 //Traversing Parent/Child/Sibling
 
@@ -288,12 +297,14 @@
 // h1.after(h3)
 // undefined
 
-//100 Button Insanity Exercise******************
-for (let button=1; button>=100; button++){
-    const button = document.createElement("button");
-    button.innerText = "Click me!";
-    document.div.appendChild(button);
-}
+//100 Button Insanity Exercise
+// const container = document.querySelector('#container');
+
+// for (let i=1; i<=100; i++){
+//     const button = document.createElement("button");
+//     button.innerText = "Click me!" + (i+1);
+//     container.appendChild(button);
+// }
 
 
 //removeChild & remove
