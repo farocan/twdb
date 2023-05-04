@@ -16,6 +16,7 @@ form.addEventListener("submit", function(e){
 // const form = document.querySelector('form');
 // const product = document.querySelector("#product");
 // const quantity = document.querySelector("#qty");
+// const list = document.querySelector("#list");
 
 // form.addEventListener("submit", function(e){
 //     e.preventDefault();
