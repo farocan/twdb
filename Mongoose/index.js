@@ -18,6 +18,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/movieApp')
  const Movie = mongoose.model("Movie", movieSchema);
 //  const amadeus = new Movie ({title: "Amadeus", year: 1986, score: 9.2, rating: "R"});
 
+//Loading a file in node environment:
+// node -i -e "$(< index.js)"
+
 
 //  Movie.insertMany ([
 //     {title: "Amelie", year: 2001, score:8.3, rating: "R"},
