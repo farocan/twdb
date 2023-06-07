@@ -17,7 +17,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopApp')
     price: {
         type: Number,
         required: true,
-        min: 0
+        min: [0, "Price must be positive ya dodo!"]
     },
     onSale: {
         type: Boolean,
@@ -32,19 +32,67 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopApp')
         inStore: {
             type: Number,
             default: 0
+        },
+        size: {
+            type: String,
+            enum: ["S", "M", "L"]
         }
     }
  });
 
+//  productSchema.methods.greet = function() {
+//     console.log("HELLO!! HI!! HOWDY!!!")
+//     console.log(`- from ${this.name}`)
+//  }
+
+ //Loading a file in node environment:
+// node -i -e "$(< product.js)"
+
+productSchema.methods.toggleOnSale = function(){
+    this.onSale = !this.onSale;
+    this.save();
+}
+
+productSchema.methods.addCategory = function(newCat){
+    this.categories.push(newCat);
+    return this.save;
+}
+
+productSchema.statics.fireSale = function(){
+    return this.updateMany({}, {onSale: true, price: 0})
+}
+
  const Product = mongoose.model("Product", productSchema);
 
- const bike = new Product ({name: "Bike Helmet", price: 19.50, categories: ["Cycling", "Safety" ]})
- bike.save()
- .then(data =>{
-    console.log("IT WORKED!")
-    console.log(data);
- })
- .catch(err => {
-    console.log("oh no error!")
-    console.log(err)
- })
+ const findProduct = async() =>{
+    const foundProduct = await Product.findOne({name: "Mountain Bike"});
+    console.log(foundProduct)
+    await foundProduct.toggleOnSale();
+    await foundProduct.addCategory("Outdoors")
+    console.log(foundProduct)
+ }
+
+Product.fireSale().then(res=> console.log(res))
+
+//  findProduct();
+
+//  const bike = new Product ({name: "Cycling Jersey", price: 28.50, categories: ["Cycling"], size: "XS"})
+//  bike.save()
+//  .then(data =>{
+//     console.log("IT WORKED!")
+//     console.log(data);
+//  })
+//  .catch(err => {
+//     console.log("oh no error!")
+//     console.log(err)
+//  })
+
+// Product.findOneAndUpdate({name: "Tire Pump"}, {price: -9}, {new: true, runValidators: true})
+// .then(data =>{
+//     console.log("IT WORKED!")
+//     console.log(data);
+//  })
+//  .catch(err => {
+//     console.log("oh no error!")
+//     console.log(err)
+//  })
