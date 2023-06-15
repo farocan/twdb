@@ -42,7 +42,7 @@ app.get("/products/new", (req, res)=> {
 app.post("/products", async (req, res)=>{
     const newProduct = new Product(req.body);
     await newProduct.save();
-    res.redirect("/products/${newProduct._id}")
+    res.redirect(`/products/${newProduct._id}`)
 })
 
 app.get("/products/:id", async (req, res)=>{
