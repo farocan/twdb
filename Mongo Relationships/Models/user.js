@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/relationshipDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
@@ -9,18 +9,19 @@ mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser
         console.log(err)
     })
 
-    const userSchema = new mongoose.Schema({
-        first: String,
-        last: String,
-        addresses: [
-            {
-                street: String,
-                city: String,
-                state: String,
-                country: String
-            }
-        ]
-    })
+const userSchema = new mongoose.Schema({
+    first: String,
+    last: String,
+    addresses: [
+        {
+            _id: {_id: false },
+            street: String,
+            city: String,
+            state: String,
+            country: String
+        }
+    ]
+})
 
     const User = mongoose.model('User', userSchema);
 
@@ -39,4 +40,18 @@ mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser
         console.log(res)
     }
 
-    makeUser();
+    const addAddress = async(id) => {
+        const user = await User.findById(id);
+        user.addresses.push(
+            {
+            street: '99 3rd St',
+            city: 'New York',
+            state: 'NY',
+            country: 'USA'
+        }
+        )
+        const res = await user.save()
+        console.log(res);
+    }
+
+addAddress('64af01270f9a2b393e24b9af')
