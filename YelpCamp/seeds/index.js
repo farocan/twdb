@@ -20,11 +20,16 @@ const seedDB = async()=> {
         const random1000 = Math.floor(Math.random()* 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
+            //YOUR USER ID
             author: '64ba20b34e842698d3a651ad',
             location: `${cities[random1000].city}, ${cities[random1000].state} `,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem similique suscipit minus necessitatibus voluptatem illo fugiat excepturi earum labore obcaecati praesentium facere exercitationem, error ut laboriosam at reiciendis assumenda deserunt.',
             price,
+            geometry: { 
+                type: "Point",
+                coordinates: [-113.1331, 47.0202]
+            },
             image: [
                 {
                   url: 'https://res.cloudinary.com/dp0t9pzdk/image/upload/v1690354742/YelpCamp/hp9bsfz6byrdhluvxwqy.jpg',
