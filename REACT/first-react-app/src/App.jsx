@@ -12,6 +12,9 @@ import PropertyList from "./PropertyList";
 import Clicker from "./Clicker";
 import Form from "./Form";
 import ClickerExercise from "./ClickerExercise";
+import Counter from "./Counter";
+import Toggler from "./Toggler";
+import TogglerCounter from "./TogglerCounter";
 
 const data = [
   {id:1, item: "eggs", quantity: 12, completed: false},
@@ -34,8 +37,11 @@ function App() {
   <div>
     {/* <Form/>
     <Clicker/> */}
-    <ClickerExercise message="HI!!!" buttonText="Please Click Me"/>
-    <ClickerExercise message="Please Stop Clicking Me!" buttonText="do not click"/>
+    {/* <Toggler/> */}
+    <TogglerCounter/>
+    {/* <Counter/> */}
+    {/* <ClickerExercise message="HI!!!" buttonText="Please Click Me"/>
+    <ClickerExercise message="Please Stop Clicking Me!" buttonText="do not click"/> */}
       {/* < PropertyList properties = {properties} /> */}
         {/* <ShoppingList items={data}/> */}
         {/* <Slots val1= "apple" val2="apple" val3="apple"/>
