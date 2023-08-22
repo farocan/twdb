@@ -11,8 +11,8 @@ export function App() {
      {/* <h1>State Demo</h1> */}
      {/* <Counter/> */}
      {/* <Dumbo/> */}
-     {/* <ScoreKeeper/> */}
-     <EmojiClicker/>
+     <ScoreKeeper numPlayers={5} target={5}/>
+     {/* <EmojiClicker/> */}
     </>
   )
 }
