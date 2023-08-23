@@ -1,7 +1,20 @@
 import {useState} from "react";
-function ShoppingListForm({addItem}){
+function ValidatedShoppingListForm({addItem}){
     const [formData, setFormData] = useState({product: "", quantity: 0});
+    const [productIsValid, setProductIsValid] = useState(false);
+    
+    const validate = (product)=> {
+        if(product.length === 0){
+            setProductIsValid(false);
+        } else {
+            setProductIsValid(true);
+        }
+    };
+
     const handleChange = (evt) => {
+        if(evt.target.name === "product"){
+        validate(evt.target.value);
+        }  
         setFormData(currData => {
             return {
                 ...currData,
@@ -11,8 +24,10 @@ function ShoppingListForm({addItem}){
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(formData);
-        setFormData({product: "", quantity: 0});
+        if(productIsValid){
+            addItem(formData);
+            setFormData({product: "", quantity: 0});
+        }
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -25,6 +40,9 @@ function ShoppingListForm({addItem}){
                 onChange={handleChange}
                 value= {formData.product}
             />
+            {!productIsValid && (
+            <p style={{color: "red"}}>Product name cannot be empty</p>
+            )}
             <label htmlFor="quantity">Quantity</label>
             <input 
                 type="number" 
@@ -34,9 +52,9 @@ function ShoppingListForm({addItem}){
                 onChange={handleChange}
                 value= {formData.quantity}
             />
-            <button>Add Item</button>
+            <button disabled={!productIsValid}>Add Item</button>
         </form>
     )
 }
 
-export default ShoppingListForm;
+export default ValidatedShoppingListForm;
