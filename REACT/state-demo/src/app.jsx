@@ -53,13 +53,13 @@ function allSameValue(dice) {
 function App() {
   return (
     <>
-      {/* <BoxGrid /> */}
-      <LuckyN winCheck={lessThan4} title="Roll less than 4" />
+      <BoxGrid />
+      {/* <LuckyN winCheck={lessThan4} title="Roll less than 4" />
       <LuckyN
         winCheck={allSameValue}
         numDice={3}
         title="Roll the same number"
-      />
+      /> */}
     </>
   );
 }
