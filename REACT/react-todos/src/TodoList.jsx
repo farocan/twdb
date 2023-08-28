@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import List from '@mui/material/List';
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
-import {Box, Typography} from '@mui/material/Box';
+import {Box, Typography} from '@mui/material';
 
 // const initialTodos = [
 //     {id: 1, text: "walk the doc", completed: false},

@@ -7,7 +7,7 @@ import TodoList from './TodoList';
 import Navbar from './Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -19,3 +19,8 @@ function App() {
 }
 
 export default App
+
+
+
+
+
